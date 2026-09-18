@@ -206,12 +206,14 @@ async def mock_paytm(body: MockCampaignRequest):
 
 @app.post('/api/n8n/callback')
 async def n8n_callback(request: Request):
-    secret = request.headers.get('X-N8N-Secret')
-    if not get_settings().n8n_callback_secret or secret != get_settings().n8n_callback_secret:
-        raise HTTPException(401, 'Invalid callback secret')
+    configured_secret = get_settings().n8n_callback_secret
+    if configured_secret:
+        secret = request.headers.get('X-N8N-Secret')
+        if secret != configured_secret:
+            raise HTTPException(401, 'Invalid callback secret')
     data = await request.json()
     task_id = data.get('task_id')
-    if not task_id or not db.tasks.get(task_id):
+    if not task_id or not db.get_task(task_id):
         raise HTTPException(404, 'Task not found')
     db.create_agent_log(task_id, 'n8n', 'callback', 'COMPLETED', {}, data)
     return {'status': 'received'}
