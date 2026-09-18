@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paytm Saarthi AI — Your AI Business Teammate</title>
+  <meta name="description" content="Paytm Saarthi AI: Tell it your goal. Saarthi gets it done. Autonomous multi-agent operations for merchants.">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23002970'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside class="app-sidebar" id="appSidebar">
+    <div class="sidebar-header">
+      <a href="#" class="brand-logo" id="brandLogoBtn">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+          </svg>
+        </div>
+        <div class="brand-title-wrap">
+          <div class="brand-title">
+            Saarthi <span class="brand-ai-tag">AI</span>
+          </div>
+          <span class="brand-subtitle">Your AI Business Teammate</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Operations</span>
+
+      <a href="#dashboard" class="nav-item active" data-nav="dashboard" id="navHome">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </span>
+        <span>Home</span>
+      </a>
+
+      <a href="#goals" class="nav-item" data-nav="goals" id="navGoals">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </span>
+        <span>Goals</span>
+        <span class="nav-badge" id="sidebarLiveBadge">1 Live</span>
+      </a>
+
+      <a href="#campaigns" class="nav-item" data-nav="campaigns" id="navCampaigns">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </span>
+        <span>Campaigns</span>
+        <span class="nav-badge">3</span>
+      </a>
+
+      <a href="#analytics" class="nav-item" data-nav="analytics" id="navAnalytics">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </span>
+        <span>Analytics</span>
+      </a>
+
+      <span class="nav-section-label">Management</span>
+
+      <a href="#customers" class="nav-item" data-nav="customers" id="navCustomers">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <span>Customers</span>
+      </a>
+
+      <a href="#memory" class="nav-item" data-nav="memory" id="navMemory">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>
+        </span>
+        <span>AI Memory</span>
+      </a>
+
+      <a href="#settings" class="nav-item" data-nav="settings" id="navSettings">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        </span>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+    <!-- Sidebar Footer / Autonomous Pulse Indicator -->
+    <div class="sidebar-footer">
+      <div class="sidebar-status-card">
+        <div class="status-dot-pulse"></div>
+        <div>
+          <div class="status-text-title">Autonomous Loop Active</div>
+          <div class="status-text-sub" id="backendStatusLabel">Connected: Groq & Supabase</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="app-header">
+    <div class="header-left">
+      <!-- Mobile Menu Toggle -->
+      <button class="header-action-btn mobile-toggle" id="mobileMenuBtn" aria-label="Toggle menu" style="display:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+
+      <!-- Global Command Search -->
+      <div class="header-search">
+        <span class="header-search-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <input type="text" class="header-search-input" id="globalSearchInput" placeholder="Ask Saarthi anything… (e.g. show weekend sales)">
+        <kbd class="header-search-kbd">/</kbd>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Theme Toggle Switcher -->
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme" title="Switch Theme">
+        <span class="theme-icon-sun" id="sunIcon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="theme-icon-moon" id="moonIcon" style="display:none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+        <span id="themeToggleText">Light</span>
+      </button>
+
+      <!-- Notifications -->
+      <button class="header-action-btn" id="notificationsBtn" aria-label="Notifications" title="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notification-badge"></span>
+      </button>
+
+      <!-- Merchant Profile -->
+      <button class="merchant-profile-btn" id="merchantProfileBtn">
+        <div class="merchant-avatar">VK</div>
+        <div class="merchant-info">
+          <div class="merchant-name" id="headerMerchantName">Vishnu Karanth</div>
+          <div class="merchant-store" id="headerStoreName">Vishnu Store</div>
+        </div>
+        <svg class="profile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="app-main" id="appMain">
+
+    <!-- SCREEN 1: DASHBOARD (HOME) -->
+    <section class="view-section active" id="view-dashboard">
+      <!-- Greeting -->
+      <div class="dashboard-greeting">
+        <h1 class="greeting-title">Good morning, Vishnu Karanth 👋</h1>
+        <p class="greeting-sub">Tell Saarthi what you want to achieve. We'll analyze, plan, execute and measure.</p>
+      </div>
+
+      <!-- Centerpiece: Main Saarthi Command Card -->
+      <div class="command-center-card">
+        <div class="command-card-glow"></div>
+        <div class="command-card-header">
+          <h2 class="command-card-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="command-sparkle-icon">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+            What do you want to achieve?
+          </h2>
+          <span class="badge badge-primary">Groq LPU Ready</span>
+        </div>
+
+        <div class="command-input-container">
+          <input type="text" class="command-input" id="goalInput" placeholder="Example: Increase my weekend sales by 15%">
+          <div class="command-actions">
+            <button class="mic-btn" id="voiceMicBtn" title="Speak your goal (Voice AI)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </button>
+            <button class="btn btn-accent command-submit-btn" id="askSaarthiBtn">
+              <span>Ask Saarthi</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Goal Suggestions -->
+        <div class="command-suggestions">
+          <span class="suggestions-label">Suggestions:</span>
+          <button class="suggestion-chip" data-goal="Increase weekend sales by 15%">
+            <span>📈</span> Increase weekend sales
+          </button>
+          <button class="suggestion-chip" data-goal="Bring back inactive customers with personalized 10% coupon">
+            <span>🎯</span> Bring back inactive customers
+          </button>
+          <button class="suggestion-chip" data-goal="Promote a new product launch across retail customers">
+            <span>✨</span> Promote a new product
+          </button>
+          <button class="suggestion-chip" data-goal="Clear slow-moving inventory with weekend BOGO offer">
+            <span>📦</span> Clear slow-moving inventory
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Actions Strip -->
+      <div class="quick-actions-strip">
+        <div class="quick-action-card" id="qaCreateCampaign">
+          <div class="action-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div>
+            <div class="action-title">Create Campaign</div>
+            <div class="action-desc">Run offers & promotions</div>
+          </div>
+        </div>
+
+        <div class="quick-action-card" id="qaViewAnalytics">
+          <div class="action-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <div>
+            <div class="action-title">View Analytics</div>
+            <div class="action-desc">Track your growth</div>
+          </div>
+        </div>
+
+        <div class="quick-action-card" id="qaManageProducts">
+          <div class="action-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+          </div>
+          <div>
+            <div class="action-title">Manage Products</div>
+            <div class="action-desc">Update your catalog</div>
+          </div>
+        </div>
+
+        <div class="quick-action-card" id="qaCustomerInsights">
+          <div class="action-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <div>
+            <div class="action-title">Customer Insights</div>
+            <div class="action-desc">Know your customers</div>
+          </div>
+        </div>
+
+        <div class="quick-action-card" id="qaAskSaarthi">
+          <div class="action-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 18v4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M18 12h4"/><path d="m19.07 4.93-2.83 2.83"/></svg>
+          </div>
+          <div>
+            <div class="action-title">Ask Saarthi</div>
+            <div class="action-desc">Get AI recommendations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Overview KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Total Sales</span>
+            <div class="kpi-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value">₹1,85,420</div>
+          <div class="kpi-meta">
+            <span class="kpi-trend up">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+              12.5%
+            </span>
+            <span class="kpi-period">vs last month</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Transactions</span>
+            <div class="kpi-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value">1,248</div>
+          <div class="kpi-meta">
+            <span class="kpi-trend up">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+              8.2%
+            </span>
+            <span class="kpi-period">vs last month</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Total Customers</span>
+            <div class="kpi-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value">892</div>
+          <div class="kpi-meta">
+            <span class="kpi-trend up">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+              14.1%
+            </span>
+            <span class="kpi-period">vs last month</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Active Campaigns</span>
+            <div class="kpi-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value">3</div>
+          <div class="kpi-meta">
+            <span class="badge badge-success">2 Executing</span>
+            <span class="kpi-period">1 Scheduled</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Grid: Sales Overview Chart + Customer Segments -->
+      <div class="dashboard-middle-grid">
+        <!-- Sales Chart -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Sales Overview</h3>
+              <p class="card-subtitle">Real-time daily revenue tracking</p>
+            </div>
+            <div class="chart-controls">
+              <button class="chart-period-btn active" data-period="7D">7D</button>
+              <button class="chart-period-btn" data-period="30D">30D</button>
+              <button class="chart-period-btn" data-period="90D">90D</button>
+              <button class="chart-period-btn" data-period="1Y">1Y</button>
+            </div>
+          </div>
+          <div class="chart-svg-container" id="salesChartContainer">
+            <!-- Dynamic SVG Area Chart injected via JS -->
+          </div>
+        </div>
+
+        <!-- Customer Segments Donut -->
+        <div class="card segments-card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Customer Segments</h3>
+              <p class="card-subtitle">Active audience distribution</p>
+            </div>
+          </div>
+          <div class="donut-chart-wrap" id="donutContainer">
+            <!-- Dynamic SVG Donut Chart injected via JS -->
+            <div class="donut-center-text">
+              <div class="donut-center-val">892</div>
+              <div class="donut-center-label">Total</div>
+            </div>
+          </div>
+          <div class="segments-legend">
+            <div class="legend-item">
+              <div class="legend-left">
+                <span class="legend-dot" style="background:#002970;"></span>
+                <span>Repeat Customers</span>
+              </div>
+              <span class="legend-val">42% (375)</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-left">
+                <span class="legend-dot" style="background:#00baf2;"></span>
+                <span>New Customers</span>
+              </div>
+              <span class="legend-val">28% (250)</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-left">
+                <span class="legend-dot" style="background:#10b981;"></span>
+                <span>High Value</span>
+              </div>
+              <span class="legend-val">18% (160)</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-left">
+                <span class="legend-dot" style="background:#94a3b8;"></span>
+                <span>Inactive</span>
+              </div>
+              <span class="legend-val">12% (107)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lower Grid: Top Products + Recent Activity -->
+      <div class="dashboard-lower-grid">
+        <!-- Top Products -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Top Products</h3>
+              <p class="card-subtitle">Best-performing catalog items</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="viewCatalogBtn">Catalog →</button>
+          </div>
+          <table class="products-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Sales</th>
+                <th>Revenue</th>
+                <th>Growth</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="product-cell-name">Cold Coffee</div>
+                  <div class="product-cell-cat">Beverage</div>
+                </td>
+                <td>342 units</td>
+                <td><strong>₹41,040</strong></td>
+                <td><span class="badge badge-success">+18%</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-cell-name">Masala Chai</div>
+                  <div class="product-cell-cat">Beverage</div>
+                </td>
+                <td>580 units</td>
+                <td><strong>₹23,200</strong></td>
+                <td><span class="badge badge-success">+12%</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-cell-name">Veg Grilled Sandwich</div>
+                  <div class="product-cell-cat">Food</div>
+                </td>
+                <td>195 units</td>
+                <td><strong>₹17,550</strong></td>
+                <td><span class="badge badge-success">+9%</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-cell-name">Samosa</div>
+                  <div class="product-cell-cat">Snacks</div>
+                </td>
+                <td>420 units</td>
+                <td><strong>₹12,600</strong></td>
+                <td><span class="badge badge-info">+4%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Recent Saarthi Activity -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Recent Saarthi Activity</h3>
+              <p class="card-subtitle">Autonomous agent actions</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="viewAllActivityBtn">History →</button>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="activity-content">
+                <div class="activity-goal-title">Increase weekend sales by 15%</div>
+                <div class="activity-desc">Campaign executed successfully via mock Paytm Soundbox & POS hook.</div>
+                <div class="activity-meta">
+                  <span class="badge badge-success">Completed</span>
+                  <span class="activity-time">2 hours ago</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="activity-content">
+                <div class="activity-goal-title">Promote new arrivals across Bangalore retail</div>
+                <div class="activity-desc">Insights Agent analyzing customer transaction velocity.</div>
+                <div class="activity-meta">
+                  <span class="badge badge-warning">In Progress</span>
+                  <span class="activity-time">4 hours ago</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div class="activity-content">
+                <div class="activity-goal-title">Customer reactivation push</div>
+                <div class="activity-desc">Groq LPU synthesized Kannada & Hindi regional promotional copy.</div>
+                <div class="activity-meta">
+                  <span class="badge badge-info">Planned</span>
+                  <span class="activity-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saarthi Intelligent Recommendation Card -->
+      <div class="recommendation-banner-card">
+        <div>
+          <div class="rec-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            Saarthi Recommendation
+          </div>
+          <h3 class="rec-title">“Weekend sales are 24% lower than your weekday average.”</h3>
+          <p class="rec-desc">
+            Based on the last 30 days of transactions, peak Saturday traffic drops after 4 PM. Consider launching a 15% discount on Cold Coffee and Beverages targeted at repeat customers to capture weekend footfall.
+          </p>
+        </div>
+        <button class="btn rec-btn" id="runRecCampaignBtn">
+          <span>Run This Campaign</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: GOAL EXECUTION PAGE (DEDICATED AUTONOMOUS TIMELINE) -->
+    <section class="view-section" id="view-goals">
+      <div class="execution-container">
+        <!-- Execution Hero Status Card -->
+        <div class="execution-hero-card">
+          <div class="exec-goal-wrap">
+            <div class="exec-status-pill">
+              <span class="exec-status-dot"></span>
+              <span id="activeGoalStatusBadge">SAARTHI IS WORKING</span>
+            </div>
+            <h2 class="exec-goal-title" id="activeGoalTitle">“Increase my weekend sales by 15%”</h2>
+            <div class="exec-goal-id">Task ID: <span id="activeGoalTaskId">task-4130ca24-live</span> • Merchant: Vishnu Electronics & Cafe</div>
+          </div>
+          <div class="exec-controls">
+            <button class="btn btn-secondary btn-sm" id="stepPipelineBtn">Step Forward</button>
+            <button class="btn btn-secondary btn-sm" id="replayPipelineBtn">Re-run Flow</button>
+            <button class="btn btn-primary btn-sm" id="syncBackendBtn">Live Backend Sync</button>
+          </div>
+        </div>
+
+        <!-- 8-Stage Autonomous Pipeline Timeline -->
+        <div class="timeline-card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Autonomous Execution Pipeline</h3>
+              <p class="card-subtitle">Continuous loop: Understands → Investigates → Reasons → Plans → Executes → Verifies → Adapts</p>
+            </div>
+            <span class="badge badge-success" id="overallPipelineBadge">Stage 6 of 8 Active</span>
+          </div>
+
+          <div class="timeline-stages-wrapper" id="pipelineTimelineWrapper">
+            <!-- Stages 1 to 8 will be populated / dynamic -->
+          </div>
+        </div>
+
+        <!-- Multi-Agent Coordinated Team Grid -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Multi-Agent Operations Team</h3>
+              <p class="card-subtitle">Real-time collaboration across dedicated AI specialists</p>
+            </div>
+            <span class="badge badge-primary">Supervisor Loop #8942-B</span>
+          </div>
+
+          <div class="team-grid" id="agentTeamGrid">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: CAMPAIGNS PAGE -->
+    <section class="view-section" id="view-campaigns">
+      <div class="hackathon-disclaimer-banner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span><strong>Mock Paytm API — Hackathon Demo:</strong> Campaign execution is simulated via sandboxed POS webhooks. No live payment settlements are modified.</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Campaign Management</h2>
+            <p class="card-subtitle">Automated and scheduled merchant promotions</p>
+          </div>
+          <button class="btn btn-primary btn-sm" id="newCampaignBtn">+ New Campaign</button>
+        </div>
+
+        <table class="campaigns-table">
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Offer</th>
+              <th>Target Segment</th>
+              <th>Language</th>
+              <th>Status</th>
+              <th>Created</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="campaignsTableBody">
+            <!-- Dynamic rows injected via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: ANALYTICS PAGE -->
+    <section class="view-section" id="view-analytics">
+      <!-- Highlight: Goal Achieved Card -->
+      <div class="goal-achieved-card">
+        <div>
+          <span class="badge" style="background:rgba(255,255,255,0.25); color:#ffffff; margin-bottom:8px;">Demo Simulation</span>
+          <h2 class="goal-achieved-title">GOAL ACHIEVED — Weekend Revenue Surge</h2>
+          <p style="opacity:0.9; max-width:540px;">Your automated weekend boost campaign exceeded target sales by +2.0% without hurting gross margins.</p>
+        </div>
+        <div class="goal-stats-row">
+          <div class="goal-stat-box">
+            <div class="goal-stat-label">Target Lift</div>
+            <div class="goal-stat-val">+15%</div>
+          </div>
+          <div class="goal-stat-box">
+            <div class="goal-stat-label">Actual Lift</div>
+            <div class="goal-stat-val">+17%</div>
+          </div>
+          <div class="goal-stat-box">
+            <div class="goal-stat-label">ROI Impact</div>
+            <div class="goal-stat-val">3.4x</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-middle-grid">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Revenue & Volume Trends</h3>
+              <p class="card-subtitle">Comparing weekday vs weekend velocity</p>
+            </div>
+          </div>
+          <div class="chart-svg-container" id="analyticsChartContainer"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Segment Retention</h3>
+              <p class="card-subtitle">30-day repeat purchase rate</p>
+            </div>
+          </div>
+          <div class="donut-chart-wrap" id="analyticsDonutContainer">
+            <div class="donut-center-text">
+              <div class="donut-center-val">68%</div>
+              <div class="donut-center-label">Retention</div>
+            </div>
+          </div>
+          <div class="segments-legend">
+            <div class="legend-item">
+              <div class="legend-left"><span class="legend-dot" style="background:#002970;"></span><span>Weekend Shoppers</span></div>
+              <span class="legend-val">68%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-left"><span class="legend-dot" style="background:#00baf2;"></span><span>Weekday Morning Rush</span></div>
+              <span class="legend-val">74%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 5: CUSTOMERS PAGE -->
+    <section class="view-section" id="view-customers">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Customer Segments & Directory</h2>
+            <p class="card-subtitle">892 active merchant shoppers tagged by behaviour</p>
+          </div>
+          <input type="text" class="form-input" style="max-width:260px; height:36px;" placeholder="Search customers…">
+        </div>
+
+        <table class="campaigns-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Segment</th>
+              <th>Preferred Language</th>
+              <th>Total Orders</th>
+              <th>Lifetime Spend</th>
+              <th>Last Active</th>
+            </tr>
+          </thead>
+          <tbody id="customersTableBody">
+            <!-- Populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SCREEN 6: AI MEMORY PAGE -->
+    <section class="view-section" id="view-memory">
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">SAARTHI MEMORY</h2>
+            <p class="card-subtitle">Structured learned knowledge about your store, preferences, and recurring business patterns</p>
+          </div>
+          <span class="badge badge-primary">Merchant-Scoped Cognee Context</span>
+        </div>
+        <p style="color:var(--text-muted); font-size:14px; max-width:800px;">
+          Unlike standard conversational chat memory, Saarthi synthesizes high-confidence behavioral patterns from transaction data and campaign outcomes to continuously refine future strategies.
+        </p>
+      </div>
+
+      <div class="memory-grid" id="memoryGrid">
+        <!-- Injected via JS -->
+      </div>
+    </section>
+
+    <!-- SCREEN 7: SETTINGS PAGE -->
+    <section class="view-section" id="view-settings">
+      <div class="card" style="max-width:800px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Merchant Settings</h2>
+            <p class="card-subtitle">Store details, language, and autonomous agent authorizations</p>
+          </div>
+        </div>
+
+        <form id="merchantSettingsForm" onsubmit="event.preventDefault(); window.saarthiApp.saveSettings();">
+          <div class="form-group">
+            <label class="form-label">Business Name</label>
+            <input type="text" class="form-input" id="settingBusinessName" value="Vishnu Electronics & Cafe">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-input" id="settingCategory">
+              <option value="Retail">Retail & General Store</option>
+              <option value="Food">Cafe & Restaurant</option>
+              <option value="Electronics">Consumer Electronics</option>
+              <option value="Apparel">Fashion & Apparel</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Preferred Regional Language (Sarvam AI)</label>
+            <select class="form-input" id="settingLanguage">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi (हिंदी)</option>
+              <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+              <option value="Tamil">Tamil (தமிழ்)</option>
+              <option value="Telugu">Telugu (తెలుగు)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Maximum Autonomous Discount Cap</label>
+            <select class="form-input" id="settingMaxDiscount">
+              <option value="15">15% Max Discount</option>
+              <option value="20" selected>20% Max Discount</option>
+              <option value="25">25% Max Discount</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Autonomous Execution Approval</label>
+            <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+              <input type="checkbox" id="settingAutoApprove" checked style="width:18px; height:18px; accent-color:var(--primary);">
+              <span style="font-size:14px; font-weight:600; color:var(--text-main);">Automatically dispatch campaigns when Groq reasoning score > 85%</span>
+            </div>
+          </div>
+
+          <div style="margin-top:28px; display:flex; gap:12px;">
+            <button type="submit" class="btn btn-primary">Save Preferences</button>
+            <button type="button" class="btn btn-secondary" onclick="window.saarthiApp.resetSettings()">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- ==================== CAMPAIGN DETAIL MODAL ==================== -->
+<div class="modal-backdrop" id="campaignDetailModal">
+  <div class="modal-box" style="max-width:620px;">
+    <div class="modal-header">
+      <h3 class="modal-title" id="cdModalTitle">Campaign Details</h3>
+      <button class="modal-close-btn" id="closeCdModalBtn">&times;</button>
+    </div>
+    <div id="cdModalBody">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ==================== AUTH / LOGIN MODAL ==================== -->
+<div class="modal-backdrop" id="authModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title" id="authModalTitle">Sign In to Saarthi</h3>
+      <button class="modal-close-btn" id="closeAuthModalBtn">&times;</button>
+    </div>
+    <form id="authForm" onsubmit="event.preventDefault(); window.saarthiApp.handleAuthSubmit();">
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" id="authEmailInput" placeholder="merchant@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input" id="authPasswordInput" placeholder="••••••••••••" required>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:13px;">
+        <label style="display:flex; align-items:center; gap:6px; color:var(--text-muted); cursor:pointer;">
+          <input type="checkbox" checked style="accent-color:var(--primary);"> Remember session
+        </label>
+        <a href="#" style="color:var(--accent-cyan); font-weight:600;">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;" id="authSubmitBtn">Sign In</button>
+      <div style="text-align:center; margin-top:16px; font-size:13px; color:var(--text-muted);">
+        <span id="authToggleQuestion">Don't have an account?</span>
+        <a href="#" id="authToggleModeBtn" style="color:var(--accent-cyan); font-weight:700; margin-left:4px;">Sign Up Free</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Core Script -->
+<script src="app.js"></script>
+
+</body>
+</html>
