@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { TableSkeleton } from '@/components/ui/Skeleton';
 import { Users, Search, UserPlus, Phone, IndianRupee } from 'lucide-react';
-import { Customer } from '@/types';
+import type { Customer } from '@/types';
 import { formatCurrency, formatDateTime } from '@/lib/utils';
 
 export default function CustomersPage() {

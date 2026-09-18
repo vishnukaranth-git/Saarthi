@@ -13,9 +13,8 @@ import {
   CheckCircle2,
   Clock,
   AlertCircle,
-  LucideIcon,
 } from 'lucide-react';
-import { AgentLog } from '@/types';
+import type { AgentLog } from '@/types';
 
 interface SupervisorCoordProps {
   currentAgent?: string;
@@ -27,7 +26,7 @@ interface AgentDef {
   name: string;
   displayName: string;
   role: string;
-  icon: LucideIcon;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
 }
 

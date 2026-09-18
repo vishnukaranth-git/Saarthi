@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { TableSkeleton } from '@/components/ui/Skeleton';
 import { Target, Sparkles, ArrowRight, TrendingUp, AlertCircle, Clock } from 'lucide-react';
-import { AgentTask } from '@/types';
+import type { AgentTask } from '@/types';
 import { formatDateTime } from '@/lib/utils';
 import Link from 'next/link';
 

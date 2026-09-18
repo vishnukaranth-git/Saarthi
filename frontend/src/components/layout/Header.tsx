@@ -51,13 +51,13 @@ export function Header({ onToggleSidebar }: HeaderProps) {
         </button>
 
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#002970] to-[#00baf2] text-white shadow-sm shadow-[#00baf2]/20">
-            <Sparkles className="h-5 w-5 text-white animate-pulse" />
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#002970] text-white shadow-sm shadow-[#002970]/20">
+            <Sparkles className="h-4 w-4 text-[#6bd7ff]" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
               <span className="font-extrabold tracking-tight text-[#002970] dark:text-white text-base">
-                Paytm Saarthi
+                Saarthi
               </span>
               <span className="rounded bg-[#00baf2]/10 px-1 py-0.5 text-[10px] font-bold text-[#00baf2]">
                 AI

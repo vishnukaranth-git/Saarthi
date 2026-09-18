@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Ca
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Brain, Sparkles, Shield, Bookmark, Calendar, CheckCircle2 } from 'lucide-react';
-import { MemoryItem } from '@/types';
+import type { MemoryItem } from '@/types';
 import { formatDateTime } from '@/lib/utils';
 
 // Representative actual learned memory entries synthesized by Cognee / Saarthi knowledge graph

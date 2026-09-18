@@ -1,9 +1,9 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
-import { User, Session } from '@supabase/supabase-js';
+import type { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
-import { Merchant, Profile } from '@/types';
+import type { Merchant, Profile } from '@/types';
 
 interface MerchantContextType {
   user: User | null;

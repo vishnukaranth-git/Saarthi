@@ -49,7 +49,7 @@ export function Shell({ children }: ShellProps) {
   }
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] text-slate-800 antialiased dark:bg-[#080e1a] dark:text-slate-100 transition-colors">
+    <div className="min-h-screen bg-[#f6f9fc] text-slate-800 antialiased dark:bg-[#080e1a] dark:text-slate-100 transition-colors">
       <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex">
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
-import { AgentLog } from '@/types';
+import type { AgentLog } from '@/types';
 import { formatDateTime } from '@/lib/utils';
 import { Terminal, ChevronDown, ChevronUp, Clock, Bot } from 'lucide-react';
 

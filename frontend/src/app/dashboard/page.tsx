@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/Button';
 import { CardSkeleton } from '@/components/ui/Skeleton';
 import Link from 'next/link';
 import { ArrowRight, Megaphone, Target, Clock, AlertCircle } from 'lucide-react';
-import { Campaign, AgentTask } from '@/types';
+import type { Campaign, AgentTask } from '@/types';
 import { formatDateTime } from '@/lib/utils';
 
 export default function DashboardPage() {

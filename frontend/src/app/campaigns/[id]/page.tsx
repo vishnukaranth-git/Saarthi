@@ -7,7 +7,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Ca
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Skeleton } from '@/components/ui/Skeleton';
-import { Campaign } from '@/types';
+import type { Campaign } from '@/types';
 import { formatDateTime } from '@/lib/utils';
 import {
   ArrowLeft,

@@ -43,7 +43,7 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
             <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#002970] text-white">
               <Sparkles className="h-4 w-4 text-[#00baf2]" />
             </div>
-            <span className="font-bold text-sm text-[#002970] dark:text-white">Paytm Saarthi</span>
+            <span className="font-bold text-sm text-[#002970] dark:text-white">Saarthi AI</span>
           </div>
           <button
             onClick={onClose}

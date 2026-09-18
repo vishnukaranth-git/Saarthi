@@ -11,7 +11,7 @@ import { GoalResultCard } from '@/components/agents/GoalResultCard';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Skeleton } from '@/components/ui/Skeleton';
-import { AgentTask, AgentLog, TaskStatus } from '@/types';
+import type { AgentTask, AgentLog, TaskStatus } from '@/types';
 import {
   ArrowLeft,
   RotateCw,
@@ -25,7 +25,8 @@ import Link from 'next/link';
 
 export default function GoalExecutionPage() {
   const params = useParams();
-  const taskId = params?.taskId as string;
+  const rawTaskId = params?.taskId;
+  const taskId = typeof rawTaskId === 'string' ? rawTaskId : Array.isArray(rawTaskId) ? rawTaskId[0] : '';
   const router = useRouter();
 
   const [task, setTask] = useState<AgentTask | null>(null);

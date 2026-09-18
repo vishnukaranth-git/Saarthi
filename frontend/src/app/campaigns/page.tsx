@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { TableSkeleton } from '@/components/ui/Skeleton';
 import { Megaphone, Plus, ExternalLink, Sparkles, Filter } from 'lucide-react';
-import { Campaign } from '@/types';
+import type { Campaign } from '@/types';
 import { formatDateTime } from '@/lib/utils';
 import Link from 'next/link';
 

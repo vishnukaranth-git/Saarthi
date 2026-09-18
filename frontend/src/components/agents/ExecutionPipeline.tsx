@@ -4,7 +4,7 @@ import React from 'react';
 import { Card, CardTitle } from '@/components/ui/Card';
 import { motion } from 'framer-motion';
 import { Check, Loader2, Circle, AlertCircle } from 'lucide-react';
-import { TaskStatus, AgentLog } from '@/types';
+import type { TaskStatus, AgentLog } from '@/types';
 
 interface ExecutionPipelineProps {
   goal: string;
